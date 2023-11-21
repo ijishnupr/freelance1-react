@@ -1,0 +1,20 @@
+.button{
+    background:black;
+    border-radius:19px;
+    color:white !important;
+    width:63px;
+    padding:5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: center;
+   
+    
+}
+.button:hover{
+
+    
+    font-weight: bold;
+    transition: .2s;
+    background-color: rgb(209, 205, 205);
+    color:black !important;
+}
