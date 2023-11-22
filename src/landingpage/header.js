@@ -11,6 +11,15 @@ export default function Header(){
   </button>
   <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul className="navbar-nav ">
+      <li className='nav-item '>
+        <Link style={{textDecoration:'none'}} className='nav-link text-light mr-3' to={'/'}>Join us</Link>
+      </li>
+      <li className='nav-item '>
+        <Link style={{textDecoration:'none'}} className='nav-link text-light mr-3' to={'/'}>Why us</Link>
+      </li>
+      <li className='nav-item '>
+        <Link style={{textDecoration:'none'}} className='nav-link text-light mr-5' to={'/'}>Contact us</Link>
+      </li>
       <li className="nav-item float-right active">
         <button className="nav-link btn btn-info mr-5 mt-1 p-1" style={style.btn} href="#">Signup</button>
       </li>
