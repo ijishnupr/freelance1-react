@@ -1,5 +1,7 @@
-import { Fragment } from 'react';
+import React,{ Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 export default function Footer(){
 
     return <Fragment>
@@ -84,35 +86,31 @@ export default function Footer(){
                                     </div>
                                 </div>
 
-                                <div className="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-                                    <Link
-                                        className="btn btn-outline-light text-white btn-floating m-1"
-                                        
-                                        role="button"
-                                    ><i className="fab fa-facebook-f"></i
-                                    ></Link>
+                                
+                              
+            <Link
+              to="#"
+              className="btn btn-outline-light text-white btn-floating m-1"
+              role="button"
+            >
+              <i className="fab fa-instagram"></i>
+            </Link>
 
-                                    <Link
-                                        className="btn btn-outline-light text-white btn-floating m-1"
-                                        
-                                        role="button"
-                                    ><i className="fab fa-twitter"></i
-                                    ></Link>
+            <Link
+              to="#"
+              className="btn btn-outline-light text-white btn-floating m-1"
+              role="button"
+            >
+              <i className="fab fa-github"></i>
+            </Link>
 
-                                    <Link
-                                        className="btn btn-outline-light text-white btn-floating m-1"
-                                       
-                                        role="button"
-                                    ><i className="fab fa-google"></i
-                                    ></Link>
-
-                                    <Link
-                                        className="btn btn-outline-light text-white btn-floating m-1"
-                                        
-                                        role="button"
-                                    ><i className="fab fa-instagram"></i
-                                    ></Link>
-                                </div>
+            <Link
+              to="#"
+              className="btn btn-outline-light text-white btn-floating m-1"
+              role="button"
+            >
+              <i className="fab fa-google"></i>
+            </Link>
                             </div>
                         </section>
                 </div>
