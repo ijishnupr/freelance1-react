@@ -1,3 +1,4 @@
+import { Slide } from "react-awesome-reveal";
 export default function Hero() {
 
     return <>
@@ -8,12 +9,17 @@ export default function Hero() {
 
                     <img style={{ width: '700px' }} src="https://i.pinimg.com/originals/6d/12/aa/6d12aaf79e6e63db76eb5e04cc7f4852.gif" alt="team" />
                 </div>
-                <div className="col" style={{border:'1px solid black',borderRadius:'15px',zIndex:'10px'}}>
+                <div className="col-12 col-md-6">
+                    <Slide>
+                        <div style={style.box}>
+
                     <h1 className="text-center" style={{ fontWeight: 'bold', marginTop: '25px' }}>Get To Know Us</h1>
                     <p className="text-center mt-5 px-5"> We specialize in connecting influencers with brands, creating impactful partnerships that drive results. Our team maximizes
                         the potential of
                         influencers and brands, working closely with a diverse roster of talented individuals across various niches and platforms</p>
                     <p className="text-center px-5">At Highonbuzz, we understand the power of social media influencers and harness it for successful brand collaborations.</p>
+                        </div>
+                    </Slide>
                 </div>
             </div>
             <div className="row">
@@ -27,7 +33,7 @@ export default function Hero() {
                             <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                         </ol>
-                        <div className="carousel-inner" style={{ height: '500px' }}>
+                        <div className="carousel-inner" style={{ height: '470px' }}>
                             <div className="carousel-item active">
                                 <img className="d-block w-100" src='https://static.wixstatic.com/media/11062b_b7d1c200ebaa4e33830bca694dba808f~mv2.jpg/v1/fill/w_1225,h_656,al_t,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_b7d1c200ebaa4e33830bca694dba808f~mv2.jpg' alt="First slide" />
 
@@ -76,4 +82,15 @@ export default function Hero() {
         </div>
 
     </>
+}
+const style={
+    box:{
+        border:'1px solid grey',
+        margin:'50px',
+        transition:'boxShadow .3s',
+        boxShadow:'0 0 11px rgba(33,33,33,.4)',
+        borderRadius:'15px',
+        backgroundColor:'rgba(173, 216, 230, 0.7)',
+        
+    }
 }
