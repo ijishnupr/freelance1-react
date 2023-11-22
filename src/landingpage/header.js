@@ -12,10 +12,10 @@ export default function Header(){
   <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul className="navbar-nav ">
       <li className="nav-item float-right active">
-        <button className="nav-link btn btn-info mr-5 mt-1 p-1"  href="#">Signup</button>
+        <button className="nav-link btn btn-info mr-5 mt-1 p-1" style={style.btn} href="#">Signup</button>
       </li>
       <li className="nav-item">
-        <button className="nav-link btn btn-success mr-5 mt-1 p-1  text-white"  href="#">Login</button>
+        <button style={style.btn} className="nav-link btn btn-success mr-5 mt-1 p-1  text-white"  href="#">Login</button>
       </li>
       
     </ul>
@@ -23,6 +23,12 @@ export default function Header(){
 </nav>
     </>
 
+}
+const style={
+  btn:{
+    borderRadius:'16px',
+    width:'100px'
+  }
 }
 
 

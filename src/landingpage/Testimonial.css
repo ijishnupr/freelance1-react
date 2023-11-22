@@ -1,0 +1,22 @@
+.testimonial-container {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  
+  .testimonial-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0; /* Adjust as needed */
+    scrollbar-color: pink;}
+  
+  .testimonial {
+    flex: 0 0 auto;
+    width: 300px; /* Adjust width as needed */
+    margin-right: 20px; /* Spacing between testimonials */
+    background-color: #f4f4f4;
+    padding: 15px;
+  }
+  
