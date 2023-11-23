@@ -16,19 +16,19 @@ export default function Curosal() {
         <div className="carousel-item active">
           <img className="d-block w-100" src={one} alt="First slide" />
           <div class="carousel-caption  mb-5 pb-5">
-            <Pagenav />
+            
           </div>
         </div>
         <div className="carousel-item">
           <img className="d-block w-100" src="https://wallpapers.com/images/hd/aviator-portrait-wearing-glasses-f5kblz0spvtpibvn.webp" alt="Second slide" />
           <div class="carousel-caption  mb-5 pb-5">
-            <Pagenav />
+            
           </div>
         </div>
         <div className="carousel-item">
           <img className="d-block w-100" src={two} alt="Third slide" />
           <div class="carousel-caption  mb-5 pb-5">
-            <Pagenav />
+           
           </div>
         </div>
       </div>

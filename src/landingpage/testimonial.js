@@ -7,6 +7,8 @@ export default class Testimonial extends Component {
   
   render() {
     return (
+      <div style={{marginBottom:'10px'}} >
+
       <Carousel
         showArrows={false}
         infiniteLoop={true}
@@ -15,8 +17,8 @@ export default class Testimonial extends Component {
         autoPlay={true}
         interval={2000}
         
-       
-      >
+        
+        >
         <div>
           <img src={image} />
           <div className="myCarousel">
@@ -53,6 +55,7 @@ export default class Testimonial extends Component {
           </div>
         </div>
       </Carousel>
+        </div>
     );
   }
 }
