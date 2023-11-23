@@ -2,8 +2,7 @@ import React from 'react';
 import { Slide } from "react-awesome-reveal"; // Assuming you have a library like 'react-reveal' for animations
 
 export default function Hero() {
-  return 
-    <>
+  return <>
       <div className="container-fluid mt-3">
         <div className="row">
           <div className="col-md d-none d-md-block">

@@ -13,7 +13,7 @@ export default function Landingpage(){
   
     <Hero/>
 <br></br><br></br>
-    <h1 style={{color:'yellow'}}>displat content and images related to the objectives / mission of website</h1>
+    <h1 style={{color:'yellow'}}>display content and images related to the objectives / mission of website</h1>
    <br></br><br></br>
     <Testimonial/>
     <Footer/>
