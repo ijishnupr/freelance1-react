@@ -20,6 +20,16 @@ export default function Header(){
       <li className='nav-item '>
         <Link style={{textDecoration:'none'}} className='nav-link text-light mr-5' to={'/'}>Contact us</Link>
       </li>
+      <li className='nav-item '>
+        <Link style={{textDecoration:'none'}} className='nav-link text-light mr-5' to={'/'}>Influencers</Link>
+      </li>
+      <li className='nav-item '>
+        <Link style={{textDecoration:'none'}} className='nav-link text-light mr-5' to={'/'}>Pricing</Link>
+      </li>
+      
+      <li className="nav-item float-right active">
+        <button className="nav-link btn btn-outline-danger mr-5 mt-1 p-1" style={style.btn} href="#">Request Demo</button>
+      </li>
       <li className="nav-item float-right active">
         <button className="nav-link btn btn-info mr-5 mt-1 p-1" style={style.btn} href="#">Signup</button>
       </li>
@@ -34,9 +44,8 @@ export default function Header(){
 
 }
 const style={
-  btn:{
-    borderRadius:'16px',
-    width:'100px'
+    btn:{borderRadius:'16px',
+    width:'150px'
   }
 }
 
