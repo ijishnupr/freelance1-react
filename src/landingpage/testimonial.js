@@ -22,12 +22,12 @@ export default class Testimonial extends Component {
         <div>
           <img src={image} />
           <div className="myCarousel">
-            <h3>Shirley Fultz</h3>
-            <h4>Designer</h4>
+            <h3>Jishnu</h3>
+            <h4>software developer</h4>
             <p>
-              It's freeing to be able to catch up on customized news and not be
-              distracted by a social media element on the same site
+              Great experience working with you
             </p>
+            <p>*****</p>
           </div>
         </div>
 

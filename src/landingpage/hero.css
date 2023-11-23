@@ -3,9 +3,6 @@
     border: 1px solid grey;
     border-radius: 20px;
     background-color: rgba(157, 214, 236, 0.3);
-    
-    
-    /* Box shadow */
     box-shadow: 0px 0px 10px 3px rgba(33, 35, 36, 0.479);
 }
 .box:hover{
@@ -14,4 +11,14 @@
     transition: .3s;
     border-radius: 30px;
 
+}
+.brandcarosal{
+    height: 500px;
+}
+
+@media  screen and (max-width:400px) {
+    .brandcarosal{
+        height:200px;
+    }
+    
 }

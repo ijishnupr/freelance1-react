@@ -3,7 +3,7 @@ import './projects.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightDots,faLightbulb,faTv,faPeopleGroup, faRankingStar, faHandshake, faFilter, faFlagCheckered, faHandHoldingDollar, faVideo } from '@fortawesome/free-solid-svg-icons';
 import { Zoom } from 'react-awesome-reveal';
-function Project({ name, value, link }) {
+function Project({ name, value, para }) {
   
 
   return (
@@ -14,6 +14,7 @@ function Project({ name, value, link }) {
       <FontAwesomeIcon icon={value} size='2xl' />
       </div>
       <div className='proj-head'>{name}</div>
+      <p className='small' >{para}</p>
     
     </div>
     </Zoom>
@@ -25,64 +26,80 @@ function ProjectList() {
   const projects = [
     {
       name: 'Amplify Reach',
-      value:faArrowUpRightDots
+      value:faArrowUpRightDots,
+      para:"Amplify your Brand's Reach"
     },
     {
       name: 'Brand Awareness',
-      value:faLightbulb
+      value:faLightbulb,
+      para:"Boost Brand Awareness for your Brand"
     },
     {
       name: 'Drive Traffic',
-      value:faTv
+      value:faTv,
+      para:"Drive Targetted Traffic to your website/Store"
     },
     {
       name: 'Look Authentic',
-      value:faRankingStar
+      value:faRankingStar,
+      para:"Authentic Social Proof for your Brand"
     },
     {
       name: 'Engagement',
-      value:faPeopleGroup
+      value:faPeopleGroup,
+      para:"Increase Customer Engagement"
     },
     {
       name: 'Trust',
-      value:faHandshake
+      value:faHandshake,
+      para:"Build Trust & Credibility using Influencer Credentials"
     },
     
     {
       name: 'Leads',
-      value:faFilter
+      value:faFilter,
+      para:"Generate High Quality Leads"
     },
     
     {
       name: 'Competitive',
-      value:faFlagCheckered
+      value:faFlagCheckered,
+      para:"Gain Competitive Advantage leveraging Influencers' brand"
     },
     
     {
       name: 'Rol',
-      value:faHandHoldingDollar
+      value:faHandHoldingDollar,
+      para:"maximize RoI with focused targetting"
     },
     
     {
       name: 'Content',
-      value:faVideo
+      value:faVideo,
+      para:"Engaging Content for your Target Audience"
     },
     
     
     // Add more project objects as needed
   ];
 
-  return (
-    <div className='row'>
+  return (<><hr></hr>
+      <h1 className='heading'>How Influencer Marketing can help your Brand</h1>
+    <div className='row px-5' >
+      
+      
       {projects.map((project, index) => (
         <Project
-          key={index}
-          name={project.name}
-          value={project.value}
-          
+        key={index}
+        name={project.name}
+        value={project.value}
+        para={project.para}
+        
         />
-      ))}
+        ))}
+        
     </div>
+        </>
   );
 }
 
