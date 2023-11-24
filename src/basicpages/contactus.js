@@ -5,6 +5,7 @@ import mail from '../img/mail2.gif'
 import Footer from '../landingpage/footer';
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import { Zoom } from 'react-awesome-reveal';
 export default function Contactus(){
     const [state, handleSubmit] = useForm("xnqknoqe");
     if (state.succeeded) {
@@ -17,8 +18,10 @@ return <>
     <img src={contact} style={{width:'100%', borderBottom:'1px solid white'}} />
 <div className='row'>
     <div className='col'>
+    <Zoom>
 
     <img className='images mt-5 mb-3' src={mail} alt='postman image'/>
+    </Zoom>
     </div>
     <div className='col col-12 col-md-7  text'>
         <p className='mr-5 text-warning'>GET IN TOUCH</p><br></br>

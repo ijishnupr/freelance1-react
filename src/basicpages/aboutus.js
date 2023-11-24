@@ -3,6 +3,7 @@ import Header from "../landingpage/header";
 import about from '../img/aboutus.gif'
 import programmer from '../img/programmer.gif'
 import './about.css'
+import { Zoom } from "react-awesome-reveal";
 export default function About() {
 
 
@@ -12,7 +13,10 @@ export default function About() {
             <img style={{ width: '100%' }} src={about} alt="about us header" />
             <div className="row">
                 <div className="col">
+                    <Zoom>
+
                     <img className="images" src={programmer} alt="gif image"/>
+                    </Zoom>
                 </div>
                 <div className="col col-12 col-md-7  text">
                     <h2 >Who We Are</h2>
