@@ -4,13 +4,13 @@ import two from '../img/two.jpg'
 export default function Curosal() {
 
   return <>
-
+    
     <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" >
       <ol className="carousel-indicators">
 
         <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        
       </ol>
       <div className="carousel-inner">
         <div className="carousel-item active">
@@ -20,13 +20,7 @@ export default function Curosal() {
           </div>
         </div>
         <div className="carousel-item">
-          <img className="d-block w-100" src="https://wallpapers.com/images/hd/aviator-portrait-wearing-glasses-f5kblz0spvtpibvn.webp" alt="Second slide" />
-          <div class="carousel-caption  mb-5 pb-5">
-            
-          </div>
-        </div>
-        <div className="carousel-item">
-          <img className="d-block w-100" src={two} alt="Third slide" />
+          <img className="d-block w-100" src={two} alt="second slide" />
           <div class="carousel-caption  mb-5 pb-5">
            
           </div>

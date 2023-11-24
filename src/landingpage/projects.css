@@ -1,56 +1,63 @@
-
 .service-box {
-   
-    width:230px;
-    max-width:231px;
-    min-width: 230px;
+
+  width: 230px;
+  max-width: 231px;
+  min-width: 230px;
   height: 150px;
-  border-radius:5px;
+  border-radius: 5px;
   padding: 10px;
   justify-content: center;
   text-align: center;
-  margin:10px;
+  margin: 10px;
   background-color: white;
-  border:.5px solid rgb(187, 183, 183)
+  border: .5px solid rgb(187, 183, 183)
 }
-.service-box:hover{
-  border:1px solid white;
-  box-shadow: 0px 2px 4px #0a8d8d, 
-              0px 4px 8px #18bbbb, 
-              0px 8px 16px #18bbbb, 
-              0px 12px 24px #18bbbb;
+
+.service-box:hover {
+  border: 1px solid white;
+  box-shadow: 0px 2px 4px #0a8d8d,
+    0px 4px 8px #18bbbb,
+    0px 8px 16px #18bbbb,
+    0px 12px 24px #18bbbb;
   transform: translateY(-10px);
   transition: 0.2s;
 }
-.service-box:hover div{
-  color:#0e6868;
+
+.service-box:hover div {
+  color: #0e6868;
 }
-.proj-head{
+
+.proj-head {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 30px;
-  font-family:sans-serif;
+  font-family: sans-serif;
 }
-.proj-body{
-  
-  font-family:sans-serif;
+
+.proj-body {
+
+  font-family: sans-serif;
   font-size: 16px;
 }
-.proj-foot{
-  color:white;
+
+.proj-foot {
+  color: white;
   position: absolute;
-  bottom:0px;
-  
+  bottom: 0px;
+
 }
-.proj-foot p{
-  
+
+.proj-foot p {
+
   display: inline-block;
   margin-right: 15px;
 }
-.iconsize{
-  color:#1E3050;
+
+.iconsize {
+  color: #1E3050;
 }
-.heading{
+
+.heading {
   text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 600;
@@ -58,30 +65,46 @@
   margin-top: 100px;
   margin-bottom: 70px;
 }
+
 @media screen and (max-width:800px) {
-  .heading{
+  .heading {
     margin-top: 50px;
     font-size: 50px;
   }
 }
-@media screen and (max-width:400px) {
-  .heading{
+
+@media screen and (max-width:500px) {
+  .heading {
     margin-top: 50px;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
+    background-color: rgb(34, 29, 29);
+    color:rgb(255, 255, 255)
   }
+
   .service-box {
-   
-    width:300px;
-    max-width:181px;
-    min-width: 300px;
-  height: 150px;
-  border-radius:5px;
-  padding: 10px;
-  justify-content: center;
-  text-align: center;
-  margin:10px;
-  background-color: white;
-  border:.5px solid rgb(187, 183, 183)
+
+    width: 300px;
+    max-width: 300px;
+    height: 150px;
+    border-radius: 5px;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+    background-color: white;
+    border: .5px solid rgb(187, 183, 183)
+  }
 }
+
+@media screen and (max-width:300px) {
+
+
+.service-box{
+
+  width:200px;
+  max-width: 200px;
+
+}
+
 }

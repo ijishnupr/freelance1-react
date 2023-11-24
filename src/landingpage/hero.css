@@ -4,6 +4,7 @@
     border-radius: 20px;
     background-color: rgba(157, 214, 236, 0.3);
     box-shadow: 0px 0px 10px 3px rgba(33, 35, 36, 0.479);
+    
 }
 .box:hover{
     background-color: rgba(29, 174, 231, 0.3);
@@ -16,7 +17,7 @@
     height: 500px;
 }
 
-@media  screen and (max-width:400px) {
+@media  screen and (max-width:550px) {
     .brandcarosal{
         height:200px;
     }
