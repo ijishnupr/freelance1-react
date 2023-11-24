@@ -8,10 +8,10 @@ import Testimonial from "./testimonial";
 export default function Landingpage(){
 
     return <>
-    <div style={{background:'#F0F3F7'}}>
-
     <Header />
     <Curosal/>
+    <div className="container-fluid" style={{background:'#F0F3F7'}}>
+
   
     <Hero/>
     <Projects/>

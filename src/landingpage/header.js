@@ -5,7 +5,7 @@ export default function Header(){
 
     return <>
     <nav className="navbar navbar-expand-lg navbar-dark" style={{background:'black'}} >
-  <Link className="navbar-brand" href="#"><img style={{width:'70%'}} src={logo} alt='logo of website'/></Link>
+  <Link className="navbar-brand" href="/"><img onClick={()=>{window.location.href='/'}} style={{width:'70%'}} src={logo} alt='logo of website'/></Link>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
@@ -18,13 +18,16 @@ export default function Header(){
         <Link style={{textDecoration:'none'}} className='nav-link text-light mr-3' to={'/'}>Why us</Link>
       </li>
       <li className='nav-item '>
-        <Link style={{textDecoration:'none'}} className='nav-link text-light mr-5' to={'/'}>Contact us</Link>
+        <Link style={{textDecoration:'none'}} className='nav-link text-light mr-5' to={'/aboutus'}>About us</Link>
       </li>
       <li className='nav-item '>
         <Link style={{textDecoration:'none'}} className='nav-link text-light mr-5' to={'/'}>Influencers</Link>
       </li>
       <li className='nav-item '>
         <Link style={{textDecoration:'none'}} className='nav-link text-light mr-5' to={'/'}>Pricing</Link>
+      </li>
+      <li className='nav-item '>
+        <Link style={{textDecoration:'none'}} className='nav-link text-light mr-5' to={'/contactus'}>Contact us</Link>
       </li>
       
       <li className="nav-item float-right active">
