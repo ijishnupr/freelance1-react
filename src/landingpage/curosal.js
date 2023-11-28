@@ -1,6 +1,7 @@
 import Header from "./header";
 import './curosal.css'
 import influence from '../img/influence.gif'
+import { Bounce } from "react-awesome-reveal";
 export default function Curosal() {
 
   return <>
@@ -14,7 +15,10 @@ export default function Curosal() {
           </div>
           <div className="col">
                 <div className="">
+                  <Bounce>
+
                   <img className="img-box" src={influence}/>
+                  </Bounce>
                 </div>
           </div>
         </div>

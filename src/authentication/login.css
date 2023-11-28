@@ -1,0 +1,11 @@
+.login{
+    height: 100vh;
+    background-color: #E8626D;
+}
+.brandname{
+    margin:auto;
+    text-align: center;
+    margin-top: 49vh;
+    
+    font-weight: bold;
+}
