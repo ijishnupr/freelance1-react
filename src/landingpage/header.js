@@ -34,10 +34,10 @@ export default function Header(){
         <button className="nav-link btn btn-outline-danger mr-5 mt-1 p-1" style={style.btn} href="#">Request Demo</button>
       </li>
       <li className="nav-item float-right active">
-        <button className="nav-link btn btn-info mr-5 mt-1 p-1" style={style.btn} onClick={()=>window.location.href='/signup'} >Signup</button>
+        <button className="nav-link btn btn-info mr-5 mt-1 p-1" style={style.btn} onClick={()=>window.location.href='/signuppath'} >Signup</button>
       </li>
       <li className="nav-item">
-        <button style={style.btn} className="nav-link btn btn-success mr-5 mt-1 p-1  text-white"  onClick={()=>window.location.href='/login'} >login</button>
+        <button style={style.btn} className="nav-link btn btn-success mr-5 mt-1 p-1  text-white"  onClick={()=>window.location.href='/loginpath'} >login</button>
       </li>
       
     </ul>

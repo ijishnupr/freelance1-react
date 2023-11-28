@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 
-function Login(){
+function LoginB(){
 let [email,setemail]=useState('');
 let [password,setpassword]=useState('');
 let navigate=useNavigate()
@@ -21,7 +21,7 @@ console.log(res.data.token);
 window.localStorage.setItem('clienttoken',res.data.token)
 }).catch((res)=>console.log(res))
 }
-return <div className='container-fluid login'>
+return <div className='container-fluid bg-info login'>
      <div className="row">
                 <div className="col-12 col-sm-7 col-md-3 mx-auto d-block bg-light rounded" style={{ marginTop: '200px' }}  >
 
@@ -41,4 +41,4 @@ return <div className='container-fluid login'>
             </div>
 </div>
 }
-export default Login
+export default LoginB
