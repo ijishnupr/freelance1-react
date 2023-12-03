@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import './login.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useAsyncError, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { Alert } from 'react-bootstrap';
 export default function Signup_B() {
     let [email, setemail] = useState('');
+    let [bname, setbname] = useState('');
     let [firstname, setfirstname] = useState('');
     let [lname, setlname] = useState('');
     let[brandname,setbrandname]=useState('');
@@ -13,6 +15,8 @@ export default function Signup_B() {
     let [img, setimg] = useState()
     let [password, setpassword] = useState('');
     let [cpassword, setcpassword] = useState('');
+    let[salert,setsalert]=useState(false);
+    let[ealert,setealert]=useState(false);
     let navigate=useNavigate();
     function loginclick(e) {
         e.preventDefault()
@@ -23,7 +27,8 @@ export default function Signup_B() {
   data.append('mobile', mobile);
   data.append('fcm_token', 'none');
   data.append('otp',otp);
-  data.append('url',b_url);
+  data.append('brand_name',bname);
+  data.append('business_name_url',b_url);
   data.append('password', password);
   data.append('profile_img', img);
         axios.post('http://127.0.0.1:8000/brand-register/',data).then((res)=>{
@@ -40,11 +45,10 @@ export default function Signup_B() {
         axios.post('http://127.0.0.1:8000/send-otp/', data)
             .then(() => {
                 console.log('done');
-                alert('done');
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('An error occurred while sending OTP');
+                
             });
     }
     return <>
@@ -54,7 +58,18 @@ export default function Signup_B() {
                     <div className='row'>
 
                         <div className="col col-sm-6 col-md-6 mx-auto d-block bg-light rounded" style={{ marginTop: '130px' }}  >
+                                 {/* Success Alert */}
+                            {salert && (
+                                <Alert variant="success"   show fade>
+                                    Successful! <span onClick={()=>setsalert(false)} style={{cursor:'pointer'}}> &times;</span> {/* Customize this message */}
+                                </Alert>
+                            )}
 
+                            {/* Error Alert */}
+                            {ealert && (
+                                <Alert variant="danger"  show fade >
+                                    An error occurred! Please try again. <span style={{cursor:'pointer'}} onClick={()=>setealert(false)}> &times;</span> {/* Customize this message */}
+                                </Alert>)}
                             <form>
                                 
 
@@ -68,6 +83,7 @@ export default function Signup_B() {
                                     </div>
                                 </div>
                                 
+                                <input className="form-control mt-3" value={bname} type="text" onChange={(event) => setbname(event.target.value)} placeholder="brand name"></input>
                                 <input className="form-control mt-3" value={email} type="email" onChange={(event) => setemail(event.target.value)} placeholder="email"></input>
                                 <div className="input-group mt-3">
                                     <input type="text" className="form-control" value={mobile} onChange={(event)=>setmobile(event.target.value)} placeholder="mobile" aria-label="Recipient's username" aria-describedby="basic-addon2"/>

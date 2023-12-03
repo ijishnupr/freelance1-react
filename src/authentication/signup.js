@@ -2,6 +2,9 @@ import { useState } from 'react';
 import './login.css';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { Alert } from 'react-bootstrap';
+import { useDispatch } from 'react-redux';
+import { setbrand } from '../slice/brandslice';
 export default function Signup() {
     let [email, setemail] = useState('');
     let [firstname, setfirstname] = useState('');
@@ -11,7 +14,11 @@ export default function Signup() {
     let [cpassword, setcpassword] = useState('');
     let [password, setpassword] = useState('');
     let [otp, setotp] = useState('');
+    let [salert, setsalert] = useState(false);
+    let [ealert, setealert] = useState(false);
+    let [location, setlocation] = useState('');
     let navigate = useNavigate();
+    const dispatch = useDispatch();
     function loginclick(e) {
         e.preventDefault()
         var data = new FormData();
@@ -21,17 +28,29 @@ export default function Signup() {
         data.append('mobile', mobile);
         data.append('password', password);
         data.append('otp', otp);
+        data.append('age', age);
+        data.append('location', location)
 
         axios.post('http://127.0.0.1:8000/register-client/', data).then((res) => {
-            navigate('/'); console.log('done', res)
+            setsalert(true);
+            
+            axios.post('http://127.0.0.1:8000/influencer-login/', data).then((res) => {
+                dispatch(setbrand(res.data));
+                navigate('/signup2');
+            })
+
+
+        }).catch(() => {
+            setealert(true);
         })
     }
+
     function verify() {
-        
-        
+
+
         const data = new FormData();
         data.append('mobile', mobile);
-        
+
         axios.post('http://127.0.0.1:8000/send-otp/', data)
             .then(() => {
                 console.log('done');
@@ -41,16 +60,30 @@ export default function Signup() {
                 console.error('Error:', error);
                 alert('An error occurred while sending OTP');
             });
+
     }
-    
+
     return <>
         <div className="contianer-fluid">
+
             <div className="row">
+
                 <div className="col ">
                     <div className='row'>
 
                         <div className="col col-sm-6 col-md-6 mx-auto d-block bg-light rounded" style={{ marginTop: '130px' }}  >
+                            {/* Success Alert */}
+                            {salert && (
+                                <Alert variant="success" show fade>
+                                    Successful! <span onClick={() => setsalert(false)} style={{ cursor: 'pointer' }}> &times;</span> {/* Customize this message */}
+                                </Alert>
+                            )}
 
+                            {/* Error Alert */}
+                            {ealert && (
+                                <Alert variant="danger" show fade >
+                                    An error occurred! Please try again. <span style={{ cursor: 'pointer' }} onClick={() => setealert(false)}> &times;</span> {/* Customize this message */}
+                                </Alert>)}
                             <form>
 
 
@@ -66,19 +99,20 @@ export default function Signup() {
 
                                 <input className="form-control mt-3" value={email} type="email" onChange={(event) => setemail(event.target.value)} placeholder="email"></input>
                                 <div className="input-group mb-3">
-                                    <input type="text" className="form-control" value={mobile} onChange={(event)=>setmobile(event.target.value)} placeholder="mobile" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
-                                        <div className="input-group-append">
-                                            <button onClick={()=>verify()} className="input-group-text" id="basic-addon2">verify</button>
-                                        </div>
+                                    <input type="text" className="form-control" value={mobile} onChange={(event) => setmobile(event.target.value)} placeholder="mobile" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                                    <div className="input-group-append">
+                                        <button onClick={() => verify()} className="input-group-text" id="basic-addon2">verify</button>
+                                    </div>
                                 </div>
                                 <input className="form-control mt-3" placeholder="age" value={age} onChange={(event) => setage(event.target.value)} type='number' />
 
 
 
 
+                                <input className="form-control mt-3" placeholder="location" value={location} onChange={(event) => setlocation(event.target.value)} ></input>
                                 <input className="form-control mt-3" placeholder="password" value={password} onChange={(event) => setpassword(event.target.value)} ></input>
                                 <input className="form-control mt-3" placeholder="confirm password" value={cpassword} onChange={(event) => setcpassword(event.target.value)} ></input>
-                                <input className='form-control mt-2' placeholder='otp' value={otp} onChange={(evnt)=>setotp(evnt.target.value)}></input>
+                                <input className='form-control mt-2' placeholder='otp' value={otp} onChange={(evnt) => setotp(evnt.target.value)}></input>
                                 <button className="btn btn-success mx-auto d-block mt-4 mb-4" onClick={loginclick}>Signup</button>
                             </form>
                         </div>
@@ -95,6 +129,7 @@ export default function Signup() {
                     <h3 className='brandname text-white'>HighonBuzz</h3>
                 </div>
             </div>
+
         </div>
 
     </>
