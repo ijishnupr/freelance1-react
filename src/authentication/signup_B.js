@@ -6,41 +6,47 @@ export default function Signup_B() {
     let [email, setemail] = useState('');
     let [firstname, setfirstname] = useState('');
     let [lname, setlname] = useState('');
+    let[brandname,setbrandname]=useState('');
+    let[b_url,setb_url]=useState('')
     let [mobile, setmobile] = useState('');
-    let [babydob, setbabydob] = useState('');
-    let [babygender, setbabygender] = useState('');
+    let[otp,setotp]=useState('');
     let [img, setimg] = useState()
     let [password, setpassword] = useState('');
+    let [cpassword, setcpassword] = useState('');
     let navigate=useNavigate();
     function loginclick(e) {
-        console.log(babydob)
         e.preventDefault()
         var data = new FormData();
   data.append('email', email);
   data.append('firstname', firstname);
   data.append('lastname', lname);
   data.append('mobile', mobile);
-  data.append('babydob', formatDate(babydob));
-  data.append('babyGender', babygender);
   data.append('fcm_token', 'none');
+  data.append('otp',otp);
+  data.append('url',b_url);
   data.append('password', password);
   data.append('profile_img', img);
-        axios.post('http://127.0.0.1:8000/register/',data).then((res)=>{
-            navigate('/');console.log('done',res)
+        axios.post('http://127.0.0.1:8000/brand-register/',data).then((res)=>{
+            navigate('/login_brand');console.log('done',res)
         }).catch((err)=>alert('notdone',err))
     }
-    function formatDate(inputDate) {
-        const date = new Date(inputDate);
-        const day = date.getDate();
-        const month = date.getMonth() + 1; // Month is 0-based, so add 1
-        const year = date.getFullYear();
-      
-        // Ensure that day and month have two digits
-        const formattedDay = day.toString().padStart(2, '0');
-        const formattedMonth = month.toString().padStart(2, '0');
-      
-        return `${formattedDay}-${formattedMonth}-${year}`;
-      }
+   
+      function verify() {
+        
+        
+        const data = new FormData();
+        data.append('mobile', mobile);
+        
+        axios.post('http://127.0.0.1:8000/send-otp/', data)
+            .then(() => {
+                console.log('done');
+                alert('done');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while sending OTP');
+            });
+    }
     return <>
         <div className="contianer-fluid">
             <div className="row">
@@ -53,22 +59,30 @@ export default function Signup_B() {
                                 
 
                                 <h3 className="mt-4">Signup</h3>
-                                <div class="row mt-5">
-                                    <div class="col">
+                                <div className="row mt-5">
+                                    <div className="col">
                                         <input type="text" className="form-control" placeholder="First name" value={firstname} onChange={(event)=>setfirstname(event.target.value)}></input>
                                     </div>
-                                    <div class="col">
+                                    <div className="col">
                                         <input type="text" className="form-control" placeholder="Last name" value={lname} onChange={(evt)=>setlname(evt.target.value)}></input>
                                     </div>
                                 </div>
                                 
                                 <input className="form-control mt-3" value={email} type="email" onChange={(event) => setemail(event.target.value)} placeholder="email"></input>
-                                <input className="form-control mt-3" placeholder="mobile" value={mobile} onChange={(event) => setmobile(event.target.value)} type='mobile' ></input>
+                                <div className="input-group mt-3">
+                                    <input type="text" className="form-control" value={mobile} onChange={(event)=>setmobile(event.target.value)} placeholder="mobile" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+                                        <div className="input-group-append">
+                                            <button onClick={()=>verify()} className="input-group-text" id="basic-addon2">verify</button>
+                                        </div>
+                                </div>
+                                <input className='form-control ' value={otp} type='number' onChange={(ent)=>setotp(ent.target.value)} placeholder='otp'/>
                                 
                                
                     
                                
-                                <input className="form-control mt-3" placeholder="password" value={password} onChange={(event) => setpassword(event.target.value)} ></input>
+                                <input className="form-control mt-3" type='url' placeholder="url" value={b_url} onChange={(event) => setb_url(event.target.value)} ></input>
+                                <input className="form-control mt-3" type='password' placeholder="password" value={password} onChange={(event) => setpassword(event.target.value)} ></input>
+                                <input className="form-control mt-3" type='password' placeholder="confirm password" value={cpassword} onChange={(event) => setcpassword(event.target.value)} ></input>
                                 <button className="btn btn-success mx-auto d-block mt-4 mb-4" onClick={loginclick}>Signup</button>
                             </form>
                         </div>

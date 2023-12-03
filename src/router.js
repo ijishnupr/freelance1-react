@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-import Landingpage from "./landingpage/landingpage";
 import Login from './authentication/login'
 import About from "./basicpages/aboutus";
 import Contactus from "./basicpages/contactus";
@@ -8,9 +7,10 @@ import I_or_B from "./authentication/influencer_or_brand";
 import LoginB from "./authentication/login_B";
 import I_or_B_signup from "./authentication/i_or_b_signup";
 import Signup_B from "./authentication/signup_B";
+import App from "./App";
 
 const router = createBrowserRouter([
-    { path: '/', element: <Landingpage/> },
+    { path: '/', element: <App/> },
     { path: '/aboutus', element: <About/> },
     {path:'/contactus',element:<Contactus/>},
     {path:'/login',element:<Login/>},
