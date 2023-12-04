@@ -5,13 +5,9 @@ import axios from 'axios';
 
 
 function Login(){
-let [fname,setfname]=useState('');
-let [lname,setlname]=useState('');
-let [mobile,setmobile]=useState('');
-let [age,setage]=useState('');
+
 let [email,setemail]=useState('');
 let [password,setpassword]=useState('');
-let [cpassword,setcpassword]=useState('');
 let navigate=useNavigate()
 let data={
     email:email,
@@ -19,11 +15,9 @@ let data={
 }
 
 function loginclick(e){
-    e.preventDefault()
-
-axios.post('http://127.0.0.1:8000/influencer-login/',data).then((res)=>{
-console.log(res.data.token);
-window.localStorage.setItem('clienttoken',res.data.token)
+    
+axios.post('influencer-login/',data).then((res)=>{
+    window.localStorage.setItem('influencertock',res.data)
 }).catch((res)=>console.log(res))
 }
 return <div className='container-fluid login'>

@@ -31,11 +31,12 @@ export default function Signup() {
         data.append('age', age);
         data.append('location', location)
 
-        axios.post('http://127.0.0.1:8000/register-client/', data).then((res) => {
+        axios.post('register-client/', data).then((res) => {
             setsalert(true);
             
-            axios.post('http://127.0.0.1:8000/influencer-login/', data).then((res) => {
+            axios.post('influencer-login/', data).then((res) => {
                 dispatch(setbrand(res.data));
+                window.localStorage.setItem('influencertock',res.data)
                 navigate('/signup2');
             })
 
@@ -45,13 +46,13 @@ export default function Signup() {
         })
     }
 
-    function verify() {
+    function verify(e) {
 
 
         const data = new FormData();
         data.append('mobile', mobile);
 
-        axios.post('http://127.0.0.1:8000/send-otp/', data)
+        axios.post('send-otp/', data)
             .then(() => {
                 console.log('done');
                 alert('done');

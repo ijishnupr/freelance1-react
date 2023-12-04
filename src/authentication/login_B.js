@@ -16,9 +16,9 @@ let data={
 function loginclick(e){
     e.preventDefault()
 
-axios.post('http://127.0.0.1:8000/brand-login/',data).then((res)=>{
-console.log(res.data.token);
-window.localStorage.setItem('clienttoken',res.data.token)
+axios.post('brand-login/',data).then((res)=>{
+
+window.localStorage.setItem('brandtock',res.data.token)
 }).catch((res)=>console.log(res))
 }
 return <div className='container-fluid bg-info login'>
