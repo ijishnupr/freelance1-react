@@ -36,7 +36,7 @@ export default function Signup() {
             
             axios.post('influencer-login/', data).then((res) => {
                 dispatch(setbrand(res.data));
-                window.localStorage.setItem('influencertock',res.data)
+                window.localStorage.setItem('influencertock',res.data.token)
                 navigate('/signup2');
             })
 

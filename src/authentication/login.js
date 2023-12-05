@@ -17,7 +17,7 @@ let data={
 function loginclick(e){
     
 axios.post('influencer-login/',data).then((res)=>{
-    window.localStorage.setItem('influencertock',res.data)
+    window.localStorage.setItem('influencertock',res.data.token)
 }).catch((res)=>console.log(res))
 }
 return <div className='container-fluid login'>
