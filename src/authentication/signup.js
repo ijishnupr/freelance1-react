@@ -5,6 +5,7 @@ import axios from 'axios';
 import { Alert } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { setbrand } from '../slice/brandslice';
+import img from '../img/login.png'
 export default function Signup() {
     let [email, setemail] = useState('');
     let [firstname, setfirstname] = useState('');
@@ -65,14 +66,14 @@ export default function Signup() {
     }
 
     return <>
-        <div className="contianer-fluid">
+        <div className="contianer-fluid" style={{background:'#ffe8df'}}>
 
             <div className="row">
 
                 <div className="col ">
                     <div className='row'>
 
-                        <div className="col col-sm-6 col-md-6 mx-auto d-block bg-light rounded" style={{ marginTop: '130px' }}  >
+                        <div className="col col-sm-6 col-md-6 mx-auto d-block rounded" style={{ marginTop: '130px',background:'#f7eeeb' }}  >
                             {/* Success Alert */}
                             {salert && (
                                 <Alert variant="success" show fade>
@@ -126,8 +127,9 @@ export default function Signup() {
                     </div>
                 </div>
 
-                <div className="col d-none d-md-block login">
-                    <h3 className='brandname text-white'>HighonBuzz</h3>
+                <div className="col col-7 d-none d-md-block login">
+                    <img className='signup' src={img} alt='img'/>
+                   
                 </div>
             </div>
 

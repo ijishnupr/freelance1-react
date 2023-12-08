@@ -1,11 +1,10 @@
 .login{
-    height: 100vh;
-    background-color: #E8626D;
-}
-.brandname{
+    height: 98vh;
     margin:auto;
-    text-align: center;
-    margin-top: 49vh;
-    
-    font-weight: bold;
+    background-color: #ffe8df;
+   
+}
+.signup{
+    max-width: 800px;
+    width: 100%;
 }
