@@ -27,7 +27,7 @@ return <div className='container-fluid'>
 
                     <Slide direction='right'>
      <div className="row">
-                <div className="col-12 col-sm-7 col-md-7 mx-auto d-block rounded" style={{ marginTop: '250px' }}  >
+                <div className="col-12 col-sm-7 col-md-8 mx-auto d-block rounded" style={{ marginTop: '250px' }}  >
 
                     <form>
                         <h3 className="mt-4">Log In</h3>

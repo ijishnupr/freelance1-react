@@ -75,7 +75,7 @@ export default function Signup() {
                 <Slide direction='right'>
                         <div className='row'>
 
-                            <div className="col col-sm-6 col-md-6 mx-auto d-block rounded" style={{ marginTop: '130px', }}>
+                            <div className="col col-sm-6 col-md-8 mx-auto d-block rounded" style={{ marginTop: '130px', }}>
                                 {salert && (
                                     <Alert variant="success" show fade>
                                         Successful! <span onClick={() => setsalert(false)} style={{ cursor: 'pointer' }}> &times;</span> {/* Customize this message */}
