@@ -67,7 +67,7 @@ export default function Signup_B() {
                         <Slide direction='right'>
                     <div className='row'>
 
-                        <div className="col col-sm-6 col-md-8 mx-auto d-block bg-light rounded" style={{ marginTop: '130px' }}  >
+                        <div className="col col-sm-6 col-md-8 mx-auto d-block rounded" style={{ marginTop: '130px' }}  >
                             {/* Success Alert */}
                             {salert && (
                                 <Alert variant="success" show fade>

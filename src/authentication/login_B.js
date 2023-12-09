@@ -29,7 +29,7 @@ function LoginB() {
                     <Slide direction='right'>
                 <div className="row">
 
-                    <div className="col-12 col-sm-7 col-md-8 mx-auto d-block bg-light rounded" style={{ marginTop: '230px' }}  >
+                    <div className="col-12 col-sm-7 col-md-8 mx-auto d-block rounded" style={{ marginTop: '230px' }}  >
 
                         <form>
                             <h3 className="mt-4">Log In</h3>
