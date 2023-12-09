@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import './login.css';
-import { Link, useAsyncError, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Alert } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
-import { setinfluencer } from '../slice/influencerslice';
+import { Slide } from 'react-awesome-reveal';
+import imgg from '../img/login.png'
 export default function Signup_B() {
     let [email, setemail] = useState('');
     let [bname, setbname] = useState('');
@@ -20,7 +21,7 @@ export default function Signup_B() {
     let [salert, setsalert] = useState(false);
     let [ealert, setealert] = useState(false);
     let navigate = useNavigate();
-    let dispatch=useDispatch();
+    let dispatch = useDispatch();
     function loginclick(e) {
         e.preventDefault()
         var data = new FormData();
@@ -36,7 +37,7 @@ export default function Signup_B() {
         data.append('profile_img', img);
         axios.post('brand-register/', data).then((res) => {
             axios.post('brand-login/', data).then((res) => {
-                window.localStorage.setItem('brandtock',res.data.token)
+                window.localStorage.setItem('brandtock', res.data.token)
                 navigate('/signup_b2');
             })
 
@@ -63,9 +64,10 @@ export default function Signup_B() {
         <div className="contianer-fluid">
             <div className="row">
                 <div className="col ">
+                        <Slide direction='right'>
                     <div className='row'>
 
-                        <div className="col col-sm-6 col-md-6 mx-auto d-block bg-light rounded" style={{ marginTop: '130px' }}  >
+                        <div className="col col-sm-6 col-md-8 mx-auto d-block bg-light rounded" style={{ marginTop: '130px' }}  >
                             {/* Success Alert */}
                             {salert && (
                                 <Alert variant="success" show fade>
@@ -107,20 +109,23 @@ export default function Signup_B() {
                                 <input className="form-control mt-3" type='url' placeholder="url" value={b_url} onChange={(event) => setb_url(event.target.value)} ></input>
                                 <input className="form-control mt-3" type='password' placeholder="password" value={password} onChange={(event) => setpassword(event.target.value)} ></input>
                                 <input className="form-control mt-3" type='password' placeholder="confirm password" value={cpassword} onChange={(event) => setcpassword(event.target.value)} ></input>
-                                <button className="btn btn-success mx-auto d-block mt-4 mb-4" onClick={loginclick}>Signup</button>
+                                <button className="btn btn-block mx-auto text-white d-block mt-4 mb-4" style={{ background: '#7071E8', borderRadius: '20px' }} onClick={loginclick}>Signup</button>
                             </form>
                         </div>
                     </div>
                     <div className="row mt-4">
                         <div className="col-1 mx-auto d-block">
-                            <Link className="btn btn-outline-dark" to={'/'}>Login</Link>
+                            <Link className="btn btn-outline-dark" to={'/login_brand'}>Login</Link>
 
                         </div>
                     </div>
+                        </Slide>
                 </div>
 
-                <div className="col d-none d-md-block login bg-info">
-                    <h3 className='brandname text-white'>HighonBuzz</h3>
+                <div className="col col-8 d-none d-md-block login">
+                    <h2 style={{ textAlign: 'center', color: 'white', marginTop: '100px' }} >Welcome To High On Buzz</h2>
+                    <img className='signup' src={imgg} alt='img' />
+
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ import './login.css';
 import { Link, } from "react-router-dom";
 import axios from "axios";
 import { Slide } from "react-awesome-reveal";
-
+import imgg from '../img/login.png';
 export default function Signup_B2() {
     const token = window.localStorage.getItem('brandtock')
     const headers = {
@@ -51,7 +51,7 @@ export default function Signup_B2() {
                         <Slide direction="right" >
                     <div className='row'>
 
-                        <div className="col col-sm-6 col-md-6 mx-auto d-block bg-light rounded" style={{ marginTop: '130px' }}>
+                        <div className="col col-sm-6 col-md-8 mx-auto d-block rounded" style={{ marginTop: '130px' }}>
                             <h3 className="mt-3 mb-3">Profile info</h3>
                             <form>
                                 {/* Upload profile picture */}
@@ -91,15 +91,17 @@ export default function Signup_B2() {
                                 </div>
 
                                 {/* Next button */}
-                                <button onClick={(e) => { handleSubmit() }} className="btn btn-primary">Next</button>
+                                <button onClick={(e) => { handleSubmit() }} className="btn btn-block text-white" style={{background:'#7071E8',borderRadius:'20px'}} >Next</button>
                             </form>
                         </div>
                     </div>
                         </Slide>
 
                 </div>
-                <div className="col d-none d-md-block bg-info login">
-                    <h3 className='brandname text-white'>HighonBuzz</h3>
+                <div className="col col-8 d-none d-md-block login">
+                    <h2 style={{ textAlign: 'center', color: 'white', marginTop: '100px' }} >Welcome To High On Buzz</h2>
+                    <img className='signup' src={imgg} alt='img' />
+
                 </div>
             </div>
         </div>
