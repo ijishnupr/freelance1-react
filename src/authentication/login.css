@@ -16,9 +16,21 @@
 
     }
 }
+@media screen and (max-width:1357px){
+    .signup{
+        margin-left: 50px;
+
+    }
+}
 @media screen and (max-width:1331px){
     .signup{
         margin-left: 50px;
+
+    }
+}
+@media screen and (max-width:1295px){
+    .signup{
+        margin-left: 32px;
 
     }
 }

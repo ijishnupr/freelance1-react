@@ -15,10 +15,10 @@ export default function Curosal() {
           </div>
           <div className="col">
                 <div className="">
-                  <Bounce>
+                  {/* <Bounce>
 
                   <img className="img-box" src={influence}/>
-                  </Bounce>
+                  </Bounce> */}
                 </div>
           </div>
         </div>
