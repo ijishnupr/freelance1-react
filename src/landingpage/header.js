@@ -35,13 +35,13 @@ export default function Header() {
       </li>
        */}
           <li className="nav-item float-right active">
-            <button className="nav-link btn btn-outline-danger mr-5 mt-1 p-1" style={style.btn} href="#">Request Demo</button>
+            <button className="nav-link btn btn-outline-danger b mr-5 mt-1 p-1" style={style.btn} href="#">Request Demo</button>
           </li>
           <li className="nav-item float-right active">
-            <button className="nav-link btn btn-info mr-5 mt-1 p-1" style={style.btn} onClick={() => setsignup(true)} >Signup</button>
+            <button className="nav-link text-white btn btn-info b mr-5 mt-1 p-1" style={style.btn} onClick={() => setsignup(true)} >Signup</button>
           </li>
           <li className="nav-item">
-            <button style={style.btn} className="nav-link btn btn-outline-success mr-5 mt-1 p-1  text-dark" onClick={() => setlogin(true)} >login</button>
+            <button style={style.btn} className="nav-link b btn btn-outline-success mr-5 mt-1 p-1  text-dark" onClick={() => setlogin(true)} >login</button>
           </li>
 
         </ul>

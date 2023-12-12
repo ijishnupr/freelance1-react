@@ -17,9 +17,10 @@
     font-size: 154px;
     font-weight: bold;
     font-style: italic;
-    -webkit-text-stroke: 4px black;
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.8);
+    /* -webkit-text-stroke: 4px black; */
     /* Width and color of the text border (adjust as needed) */
-    color: transparent;
+    color:white;
 
 }
 
