@@ -3,12 +3,12 @@ import logo from '../img/logo.webp'
 import { useState } from 'react';
 import I_or_B from '../authentication/influencer_or_brand';
 import I_or_B_signup from '../authentication/i_or_b_signup';
-
+import './header.css';
 export default function Header() {
   const [login, setlogin] = useState(false);
   const [signup, setsignup] = useState(false);
   return <>
-    <nav className="navbar navbar-expand-lg navbar-white"  >
+    <nav className="navbar navbar-expand-lg navbar-light"  >
       <Link className="navbar-brand" href="/"><img onClick={() => { window.location.href = '/' }} style={{ width: '100%', marginTop: '20px' }} src={logo} alt='logo of website' /></Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
@@ -19,16 +19,16 @@ export default function Header() {
         <Link style={{textDecoration:'none'}} className='nav-link text-light mr-3' to={'/'}></Link>
       </li> */}
           <li className='nav-item '>
-            <Link style={{ textDecoration: 'none', color: 'black' }} className='nav-link font-weight-bold mr-3' to={'/'}>Blogs</Link>
+            <Link  className='nav-link txt mr-3' to={'/'}>Blogs</Link>
           </li>
           <li className='nav-item '>
-            <Link style={{ textDecoration: 'none', color: 'black' }} className='nav-link font-weight-bold mr-5' to={'/aboutus'}>About us</Link>
+            <Link  className='nav-link txt  mr-5' to={'/aboutus'}>About us</Link>
           </li>
           {/* <li className='nav-item '>
         <Link style={{textDecoration:'none'}} className='nav-link text-light mr-5' to={'/'}>Influencers</Link>
       </li> */}
           <li className='nav-item '>
-            <Link style={{ textDecoration: 'none', color: 'black' }} className='nav-link font-weight-bold mr-5' to={'/'}>Pricing</Link>
+            <Link  className='nav-link txt mr-5' to={'/'}>Pricing</Link>
           </li>
           {/* <li className='nav-item '>
         <Link style={{textDecoration:'none'}} className='nav-link text-light mr-5' to={'/contactus'}>Contact us</Link>

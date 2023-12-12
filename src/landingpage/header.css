@@ -1,0 +1,12 @@
+.txt{
+    color: black !important;
+    font-weight: bold;
+    font-size: 17px;
+}
+.txt:hover{
+    
+    color:blueviolet !important;
+    text-shadow: 2px 2px 4px rgba(163, 18, 199, 0.3);
+    transition: .4s;
+    
+}

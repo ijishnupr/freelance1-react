@@ -1,90 +1,117 @@
-.home{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+.home {
     background-color: black;
     height: 100vh;
     width: 100%;
-    color:white;
+    
     background-image: url('../img/bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
+
 }
-.intro{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 124px;
+
+.intro {
+    font-family: 'Roboto', sans-serif;
+    font-size: 154px;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+    -webkit-text-stroke: 4px black;
+    /* Width and color of the text border (adjust as needed) */
+    color: transparent;
+
 }
-.intro2{
-    font-family:Arial, Helvetica, sans-serif;
+
+.intro2 {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     margin-top: 2vh;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke: 1px black;
+    color:black
+
 }
-.box-head{
+
+.box-head {
 
     margin-top: 20vh;
-   
+
 }
-.img-box{
+
+.img-box {
     border-radius: 20px;
-    border:5px solid #0077b5;
+    border: 5px solid #0077b5;
     margin-top: 10vh;
 }
-@media  screen and (max-width:1400px) {
-    .box-head{
+
+@media screen and (max-width:1400px) {
+    .box-head {
         margin-top: 7vh;
     }
-    .img-box{
-        width:550px;
-        margin:auto;
+
+    .img-box {
+        width: 550px;
+        margin: auto;
     }
-    .intro{
+
+    .intro {
         font-size: 90px;
     }
-    .intro2{
+
+    .intro2 {
         font-size: 17px;
     }
 }
-@media  screen and (max-width:573px) {
-    .box-head{
+
+@media screen and (max-width:573px) {
+    .box-head {
         margin-top: 7vh;
     }
-    .img-box{
-        width:450px;
-        margin:auto;
+
+    .img-box {
+        width: 450px;
+        margin: auto;
     }
-    .intro{
+
+    .intro {
         font-size: 85px;
     }
 }
-@media  screen and (max-width:423px) {
-    .box-head{
+
+@media screen and (max-width:423px) {
+    .box-head {
         margin-top: 7vh;
     }
-    .img-box{
-        width:350px;
-        margin:auto;
+
+    .img-box {
+        width: 350px;
+        margin: auto;
     }
-    .intro{
+
+    .intro {
         font-size: 70px;
     }
-    .intro2{
+
+    .intro2 {
         font-size: 16px;
     }
 }
-@media  screen and (max-width:367px) {
-    .box-head{
+
+@media screen and (max-width:367px) {
+    .box-head {
         margin-top: 7vh;
     }
-    .img-box{
-        width:300px;
-        margin:auto;
+
+    .img-box {
+        width: 300px;
+        margin: auto;
     }
-    .intro{
+
+    .intro {
         font-size: 67px;
     }
-    .intro2{
+
+    .intro2 {
         font-size: 16px;
     }
 }
