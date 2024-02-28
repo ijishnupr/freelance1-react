@@ -11,14 +11,14 @@ export default function Curosal() {
         <div className="row">
           <div className="col-12 col-md-6 box-head">
               <h1 className="intro" >Unleash The Potential</h1>
-              {/* <p className="intro2" >The #1 Talent Representation For Today’s Digital Stars and Brands</p> */}
+              <p className="intro2" >The #1 Talent Representation For Today’s Digital Stars and Brands</p>
           </div>
           <div className="col">
                 <div className="">
-                  {/* <Bounce>
+                  <Bounce>
 
                   <img className="img-box" src={influence}/>
-                  </Bounce> */}
+                  </Bounce>
                 </div>
           </div>
         </div>
